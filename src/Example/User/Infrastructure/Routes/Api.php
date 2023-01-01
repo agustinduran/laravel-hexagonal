@@ -4,6 +4,4 @@ declare(strict_types=1);
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    dd("Hola Mundo!");
-});
+Route::get('/', UserFindAllController::class);
