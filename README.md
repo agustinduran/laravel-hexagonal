@@ -1,7 +1,7 @@
 # Hexagonal Example with Laravel
 
 ## Overview
-This is a new example project implementing a Clean Architecture with Hexagonal, DDD and SOLID principles.
+This is a example project implementing a Clean Architecture with Hexagonal, DDD and SOLID principles.
 
 ## How to install
 ### Create a new database
