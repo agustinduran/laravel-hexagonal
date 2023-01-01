@@ -2,14 +2,21 @@
 
 declare(strict_types=1);
 
-namespace Src\Example\User\Infrastructure\Controller;
+namespace Src\Example\User\Infrastructure\Controllers;
+
+use Src\Example\User\Application\Find\UserFindAllUseCase;
 
 final class UserFindAllController
 {
-    public function __invoke()
+    private UserFindAllUseCase $findAllUseCase;
+
+    public function __construct(UserFindAllUseCase $findAllUseCase)
     {
-        return [
-            "greeting" => "hello world"
-        ];
+        $this->findAllUseCase = $findAllUseCase;
+    }
+
+    public function __invoke(): array
+    {
+        return $this->findAllUseCase->__invoke();
     }
 }
