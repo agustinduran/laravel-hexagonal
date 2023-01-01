@@ -8,12 +8,9 @@ use Src\Example\User\Application\Find\UserFindAllUseCase;
 
 final class UserFindAllController
 {
-    private UserFindAllUseCase $findAllUseCase;
-
-    public function __construct(UserFindAllUseCase $findAllUseCase)
-    {
-        $this->findAllUseCase = $findAllUseCase;
-    }
+    public function __construct(
+        private UserFindAllUseCase $findAllUseCase
+    ) {}
 
     public function __invoke(): array
     {
