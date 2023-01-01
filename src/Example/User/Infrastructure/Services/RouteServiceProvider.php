@@ -21,7 +21,7 @@ final class RouteServiceProvider extends ServiceProvider
         $this->mapRoutes();
     }
 
-    public function mapRoutes()
+    public function mapRoutes(): void
     {
         Route::prefix('api/users')
             ->namespace($this->namespace)
