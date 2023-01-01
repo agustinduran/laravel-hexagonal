@@ -1,7 +1,7 @@
-# Project Laravel-Hexagonal Example
+# Hexagonal Example with Laravel
 
 ## Overview
-This is a new project about hexagonal, ddd and SOLID example. 
+This is a new example project implementing a Clean Architecture with Hexagonal, DDD and SOLID principles.
 
 ## How to install
 ### Create a new database
@@ -12,4 +12,9 @@ CREATE DATABASE hexagonal_example;
 ### Run migrations
 ```
 php artisan migrate
+```
+
+### Run seeders
+```
+php artisan db:seed
 ```
