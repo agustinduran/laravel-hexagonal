@@ -7,7 +7,7 @@ This is a example project implementing a Clean Architecture with Hexagonal, DDD 
 
 Agustín Durán
 
-- GitHub: https://github.com/agustineduran
+- GitHub: https://github.com/agustinduran
 - LinkedIn: https://www.linkedin.com/in/agustineduran/
 
 ## Table of contents
