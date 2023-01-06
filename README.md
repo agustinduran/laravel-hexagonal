@@ -78,9 +78,14 @@ php artisan migrate
 php artisan db:seed
 ```
 
-## Run App
+## Run
 
-### Run with artisan
+### Run app
 ```
 php artisan serve
+```
+
+### Run tests
+```
+php artisan test
 ```
