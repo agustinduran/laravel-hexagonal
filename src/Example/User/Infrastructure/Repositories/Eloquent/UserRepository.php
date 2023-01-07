@@ -18,11 +18,16 @@ final class UserRepository implements UserRepositoryContract
 
     public function findAll(): array
     {
-        return $this->model->all()->toArray();
+        return $this->model->whereNull('deleted_at')->get()->toArray();
     }
 
     public function findById(UserId $id): ?array
     {
-        return $this->model->find($id->getValue())?->toarray();
+        return $this->model->where('id', $id->getValue())->whereNull('deleted_at')->get()->toArray();
+    }
+
+    public function deleteById(UserId $id): bool
+    {
+        return boolval($this->model->where('id', $id->getValue())->whereNull('deleted_at')->update(['deleted_at' => NOW()]));
     }
 }
