@@ -1,5 +1,7 @@
 # Hexagonal Example with Laravel
 
+<!-- TODO: add badges -->
+
 ## Overview
 This is a example project implementing a Clean Architecture with Hexagonal, DDD and SOLID principles.
 
@@ -123,6 +125,11 @@ src
 ### Create a new database
 ```sql
 CREATE DATABASE hexagonal_example;
+```
+
+### Set enviroment variables
+```
+cp .env.example .env
 ```
 
 ### Run migrations
