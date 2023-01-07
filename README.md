@@ -13,14 +13,12 @@ Agustín Durán
 ## Table of contents
 
 - [Tables](#Tables)
+- [HexagonalArchitecture](#Hexagonal Architecture)
 - [Technology](#Technology)
 - [PreRequisites](#Pre-requisites)
 - [Routes](#Routes)
 - [Run APP](#Run-APP)
-- [Preload data](#Preload-data)
 - [Run tests](#Run-tests)
-- [Standards applied](#Standards-applied)
-- [Deployment](#Deployment)
 
 ## Tables
 
@@ -48,9 +46,67 @@ updated_at | datetime
 created_at | datetime
 deleted_at | datetime
 
+## Hexagonal-Architecture
+
+```scala
+$ tree -L 6 src
+
+src
+└── Example
+    ├── Shared
+    │   ├── Application
+    │   ├── Domain
+    │   │   └── Exceptions
+    │   │       └── CustomException.php
+    │   └── Infrastructure
+    │       └── HandlerException.php
+    ├── Task
+    │   ├── Application
+    │   ├── Domain
+    │   │   └── Exceptions
+    │   └── Infrastructure
+    │       ├── Controllers
+    │       ├── Routes
+    │       └── Services
+    └── User
+        ├── Application
+        │   ├── Delete
+        │   │   └── UserDeleteByIdUseCase.php
+        │   └── Find
+        │       ├── UserFindAllUseCase.php
+        │       └── UserFindByIdUseCase.php
+        ├── Domain
+        │   ├── Contracts
+        │   │   └── UserRepositoryContract.php
+        │   ├── Exceptions
+        │   │   └── UserException.php
+        │   ├── User.php
+        │   └── ValueObjects
+        │       ├── UserEmail.php
+        │       ├── UserFullName.php
+        │       ├── UserId.php
+        │       ├── UserPassword.php
+        │       ├── UserTimestamp.php
+        │       └── UserUserName.php
+        └── Infrastructure
+            ├── Controllers
+            │   ├── UserDeleteByIdController.php
+            │   ├── UserFindAllController.php
+            │   └── UserFindByIdController.php
+            ├── Repositories
+            │   └── Eloquent
+            │       ├── User.php
+            │       └── UserRepository.php
+            ├── Routes
+            │   └── Api.php
+            └── Services
+                ├── DependencyServiceProvider.php
+                └── RouteServiceProvider.php
+```
+
 ## Technology
 
-* Proggraming languange: PHP 8.*
+* Proggraming languange: PHP 8
 * App Framework: Laravel 9
 * Database engine: MariaDB
 
@@ -76,6 +132,12 @@ php artisan migrate
 ### Run seeders
 ```
 php artisan db:seed
+```
+
+## Routes
+### Api
+```
+http://localhost:8000/api/
 ```
 
 ## Run
