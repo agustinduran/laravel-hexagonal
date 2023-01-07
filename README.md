@@ -106,7 +106,7 @@ src
 
 ## Technology
 
-* Proggraming languange: PHP 8
+* Programming languange: PHP 8
 * App Framework: Laravel 9
 * Database engine: MariaDB
 
