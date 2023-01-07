@@ -12,13 +12,14 @@ Agustín Durán
 
 ## Table of contents
 
-- [Tables](#Tables)
-- [HexagonalArchitecture](#Hexagonal Architecture)
-- [Technology](#Technology)
-- [PreRequisites](#Pre-requisites)
-- [Routes](#Routes)
-- [Run APP](#Run-APP)
-- [Run tests](#Run-tests)
+- [Tables](#tables)
+- [Hexagonal Architecture](#hexagonal-architecture)
+- [Technology](#technology)
+- [Pre Requisites](#pre-requisites)
+- [How To Install](#how-to-install)
+- [Routes](#routes)
+- [Run App](#run-app)
+- [Run tests](#run-tests)
 
 ## Tables
 
@@ -110,7 +111,7 @@ src
 * App Framework: Laravel 9
 * Database engine: MariaDB
 
-## Pre-requisites
+## Pre requisites
 
 * Laravel 9.* with PHP 8.*
 * Composer installed
@@ -141,7 +142,6 @@ http://localhost:8000/api/
 ```
 
 ## Run
-
 ### Run app
 ```
 php artisan serve
