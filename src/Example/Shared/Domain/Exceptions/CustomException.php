@@ -12,7 +12,7 @@ class CustomException extends \Exception
         $class = explode('\\', $classTemp->getName());
         return [
             'status'  => $this->getCode(),
-            'error'  => true,
+            'success' => false,
             'class'   => end($class),
             'message' => $this->getMessage()
         ];
