@@ -1,7 +1,7 @@
 <?php 
 declare(strict_types=1);
 
-namespace Src\Example\Shared\Infrastructure;
+namespace Src\Example\Shared\Infrastructure\Exceptions;
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Src\Example\Shared\Domain\Exceptions\CustomException;

@@ -49,6 +49,7 @@ updated_at | datetime
 created_at | datetime
 deleted_at | datetime
 
+<!-- TODO: Actualizar el arbol cuando avance -->
 ## Hexagonal-Architecture
 
 ```scala
