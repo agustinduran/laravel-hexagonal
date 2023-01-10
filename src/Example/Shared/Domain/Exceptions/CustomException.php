@@ -11,7 +11,7 @@ class CustomException extends \Exception
         string $message = "",
         int $code = 0,
         ?Throwable $previous = null,
-        private ?array $data
+        private ?array $data = null
     ) {
         parent::__construct($message, $code, $previous);
     }
