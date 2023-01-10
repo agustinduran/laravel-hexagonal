@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Src\Example\User\Infrastructure\Controllers;
 
-use Illuminate\Http\Request;
 use Src\Example\User\Application\Create\UserCreateUseCase;
+use Src\Example\User\Infrastructure\Requests\UserCreateRequest;
 
 final class UserCreateController
 {
@@ -13,9 +13,9 @@ final class UserCreateController
         private UserCreateUseCase $createUseCase
     ) {}
 
-    public function __invoke(Request $request): ?array
+    public function __invoke(UserCreateRequest $request): ?array
     {
-        $model = $this->createUseCase->__invoke($request->all());
+        $model = $this->createUseCase->__invoke($request->validate());
         return [
             'success' => true,
             'model'   => $model
